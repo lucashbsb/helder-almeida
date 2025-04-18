@@ -4,8 +4,9 @@ import { Menu, X } from "lucide-react";
 
 const navigation = [
   { name: "Início", href: "#" },
-  { name: "Áreas de Atuação", href: "#areas" },
   { name: "Sobre", href: "#sobre" },
+  { name: "Áreas de Atuação", href: "#areas" },
+  { name: "Equipe", href: "#equipe" },
   { name: "Contato", href: "#contato" },
 ];
 
@@ -16,8 +17,8 @@ export const Navbar = () => {
     <nav className="bg-white shadow-sm fixed w-full z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
-          <div className="font-playfair text-2xl font-bold text-primary">
-            A&O
+          <div className="font-playfair text-2xl font-bold text-[#043f60]">
+            Helder Ferreira
           </div>
 
           {/* Desktop menu */}
@@ -26,7 +27,7 @@ export const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="font-inter text-gray-600 hover:text-primary transition-colors"
+                className="font-inter text-gray-600 hover:text-[#043f60] transition-colors"
               >
                 {item.name}
               </a>
@@ -37,7 +38,7 @@ export const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-primary"
+              className="text-gray-600 hover:text-[#043f60]"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -51,7 +52,7 @@ export const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="block py-2 font-inter text-gray-600 hover:text-primary"
+                className="block py-2 font-inter text-gray-600 hover:text-[#043f60]"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
