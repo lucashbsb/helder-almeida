@@ -12,7 +12,6 @@ const Index = () => {
       <Navbar />
       <Hero />
       
-      {/* Sobre Section */}
       <section id="sobre" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -46,7 +45,6 @@ const Index = () => {
       
       <Team />
 
-      {/* Contato Section */}
       <section id="contato" className="py-20 bg-[#043f60] text-white">
         <div className="container mx-auto px-4">
           <h2 className="font-playfair text-4xl font-bold text-center mb-12">
@@ -80,7 +78,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <div className="mb-4 font-playfair text-xl">Helder Ferreira Advocacia</div>
