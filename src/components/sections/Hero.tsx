@@ -7,15 +7,17 @@ export const Hero = () => {
       {/* Dark gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#043f60] via-[#043f60]/90 to-transparent">
         {/* Background image with reduced opacity */}
-        <div className="absolute inset-0 bg-[url('/lovable-uploads/ff5f6c19-ee68-4622-bbe6-6f62236aeb4b.png')] bg-cover bg-center bg-no-repeat opacity-20" />
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/d5d30770-ffd3-469c-8b12-6360417b8235.png')] bg-cover bg-center bg-no-repeat opacity-20" />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="max-w-3xl">
-          <h2 className="text-white/80 text-xl md:text-2xl mb-3 font-inter">
-            DR. HELDER FERREIRA
-          </h2>
+          <img 
+            src="/lovable-uploads/850cecd3-5d62-4034-a081-4dec549e60f8.png" 
+            alt="Helder Almeida Logo" 
+            className="w-48 mb-8"
+          />
           <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
             ADVOCACIA <br />
             ESPECIALIZADA
