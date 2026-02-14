@@ -24,23 +24,48 @@ export const ScheduleModal = ({ children }: ScheduleModalProps) => {
     hora: "",
   });
 
+  const formatPhone = (value: string) => {
+    const numbers = value.replace(/\D/g, "");
+    if (numbers.length <= 2) {
+      return numbers.length ? `(${numbers}` : "";
+    }
+    if (numbers.length <= 7) {
+      return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
+    }
+    return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (name === "telefone") {
+      setFormData((prev) => ({ ...prev, [name]: formatPhone(value) }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const message = `Olá! Gostaria de agendar uma consulta.
+    // Format date from YYYY-MM-DD to DD/MM/YYYY
+    const formatDateBR = (dateStr: string) => {
+      const [year, month, day] = dateStr.split("-");
+      return `${day}/${month}/${year}`;
+    };
 
-*Nome:* ${formData.nome}
-*Telefone:* ${formData.telefone}
-*E-mail:* ${formData.email}
-*Data:* ${formData.data}
-*Hora:* ${formData.hora}`;
+    const message = `Olá, Dr. Helder!
 
-    const phoneNumber = "5561965588902";
+Gostaria de agendar uma consulta.
+
+Nome: ${formData.nome}
+Telefone: ${formData.telefone}
+E-mail: ${formData.email}
+Data: ${formatDateBR(formData.data)}
+Horário: ${formData.hora}
+
+Aguardo retorno.`;
+
+    const phoneNumber = "556196558902";
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
@@ -79,6 +104,8 @@ export const ScheduleModal = ({ children }: ScheduleModalProps) => {
               placeholder="(00) 00000-0000"
               value={formData.telefone}
               onChange={handleChange}
+              maxLength={15}
+              autoComplete="off"
               required
             />
           </div>
