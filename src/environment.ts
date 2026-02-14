@@ -1,5 +1,5 @@
 export default class Environment {
 
-    public static BASE = "/"
+    public static BASE = ""
 
 }

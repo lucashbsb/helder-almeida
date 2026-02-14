@@ -4,7 +4,7 @@ import { User2, GraduationCap, Award, Scale } from "lucide-react";
 
 const team = [
   {
-    name: "Dr. Helder Ferreira",
+    name: "Dr. Helder Almeida",
     role: "Advogado e Fundador",
     image: "/lovable-uploads/942fde54-1c89-42ec-851d-7bbd53128686.png",
     description: "Advogado com mais de 15 anos de experiência, especializado em direito civil e empresarial. Sua atuação é marcada pelo compromisso com a excelência e dedicação aos clientes.",

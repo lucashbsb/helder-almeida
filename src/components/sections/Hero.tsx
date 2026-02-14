@@ -6,7 +6,7 @@ export const Hero = () => {
 
             <div className="container">
                 <h1 className="font-playfair title-hero text-white">
-                    ADVOCACIA <br/>
+                    ADVOCACIA TRABALHISTA <br/>
                     ESPECIALIZADA
                 </h1>
                 <p className="font-inter text-lg md:text-xl text-white/80 max-w-2xl">

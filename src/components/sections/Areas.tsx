@@ -1,36 +1,36 @@
 
-import { Scale, Briefcase, Building2, Users2, LandPlot, Shield } from "lucide-react";
+import { Scale, Briefcase, FileText, Users2, Shield, Gavel } from "lucide-react";
 
 const areas = [
   {
-    icon: Scale,
-    title: "Direito Civil",
-    description: "Assessoria completa em questões contratuais, responsabilidade civil e direito das obrigações."
-  },
-  {
     icon: Briefcase,
-    title: "Direito Trabalhista",
-    description: "Representação especializada em relações de trabalho, processos e consultorias preventivas."
+    title: "Reclamações Trabalhistas",
+    description: "Representação em ações trabalhistas, buscando a defesa integral dos direitos do trabalhador."
   },
   {
-    icon: Building2,
-    title: "Direito Empresarial",
-    description: "Suporte jurídico integral para empresas, desde a constituição até operações complexas."
+    icon: Scale,
+    title: "Rescisões Contratuais",
+    description: "Análise e acompanhamento de rescisões, garantindo o correto pagamento de todas as verbas."
+  },
+  {
+    icon: FileText,
+    title: "Acordos e Negociações",
+    description: "Mediação e negociação de acordos trabalhistas, buscando soluções rápidas e vantajosas."
   },
   {
     icon: Users2,
-    title: "Direito Familiar",
-    description: "Orientação especializada em questões familiares, sucessórias e patrimoniais."
-  },
-  {
-    icon: LandPlot,
-    title: "Direito Tributário",
-    description: "Planejamento tributário e representação em processos administrativos e judiciais."
+    title: "Consultoria Preventiva",
+    description: "Orientação jurídica para empregadores e empregados, prevenindo conflitos trabalhistas."
   },
   {
     icon: Shield,
-    title: "Direito Previdenciário",
-    description: "Assessoria em benefícios previdenciários e representação junto ao INSS."
+    title: "Direitos do Trabalhador",
+    description: "Defesa de direitos como horas extras, adicionais, FGTS, férias e 13º salário."
+  },
+  {
+    icon: Gavel,
+    title: "Assédio e Danos Morais",
+    description: "Representação em casos de assédio moral, sexual e pedidos de indenização por danos."
   }
 ];
 
@@ -39,11 +39,10 @@ export const Areas = () => {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-center font-playfair text-4xl font-bold text-primary mb-4">
-          Áreas de Atuação
+          Área de Atuação
         </h2>
         <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-          Oferecemos serviços jurídicos especializados em diversas áreas do direito, 
-          com foco na excelência e resultados.
+          Atuamos exclusivamente em Direito do Trabalho, oferecendo assessoria e representação jurídica especializada, com foco na defesa dos direitos de trabalhadores e empregadores.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {areas.map((area) => (

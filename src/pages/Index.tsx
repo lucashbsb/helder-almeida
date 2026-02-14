@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Areas } from "@/components/sections/Areas";
 import { Team } from "@/components/sections/Team";
 import { Button } from "@/components/ui/button";
+import { ScheduleModal } from "@/components/ScheduleModal";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const Index = () => {
@@ -19,9 +20,7 @@ const Index = () => {
               Sobre o Escritório
             </h2>
             <p className="text-gray-600 mb-8 text-lg">
-              Com mais de 15 anos de experiência, o escritório Dr. Helder Ferreira é reconhecido pela excelência 
-              no atendimento e pelo compromisso com os interesses de nossos clientes. Nossa abordagem personalizada 
-              garante um atendimento humanizado e soluções jurídicas eficazes.
+              Com mais de 15 anos de atuação, o Dr. Helder Almeida – Advocacia Trabalhista consolidou-se como referência em dedicação, técnica e resultados. Atuamos com foco exclusivo na defesa dos direitos trabalhistas, oferecendo atendimento estratégico, transparente e personalizado.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
@@ -54,12 +53,12 @@ const Index = () => {
             <div className="flex flex-col items-center text-center bg-[#032b42] p-8 rounded-lg">
               <Phone className="w-10 h-10 text-gold mb-4" />
               <h3 className="font-playfair text-xl mb-2">Telefone</h3>
-              <p>(11) 9999-9999</p>
+              <p>(61) 9655-8902</p>
             </div>
             <div className="flex flex-col items-center text-center bg-[#032b42] p-8 rounded-lg">
               <Mail className="w-10 h-10 text-gold mb-4" />
               <h3 className="font-playfair text-xl mb-2">E-mail</h3>
-              <p>contato@helderferreira.adv.br</p>
+              <p>helderalmeida@gmail.com</p>
             </div>
             <div className="flex flex-col items-center text-center bg-[#032b42] p-8 rounded-lg">
               <MapPin className="w-10 h-10 text-gold mb-4" />
@@ -68,24 +67,25 @@ const Index = () => {
             </div>
           </div>
           <div className="text-center mt-12">
-            <Button 
-              className="bg-gold hover:bg-gold-light text-white px-8 py-4 text-lg rounded-md shadow-lg transition-all"
-              onClick={() => window.location.href = "mailto:contato@helderferreira.adv.br"}
-            >
-              Agende uma Consulta
-            </Button>
+            <ScheduleModal>
+              <Button 
+                className="bg-gold hover:bg-gold-light text-white px-8 py-4 text-lg rounded-md shadow-lg transition-all"
+              >
+                Agende uma Consulta
+              </Button>
+            </ScheduleModal>
           </div>
         </div>
       </section>
 
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <div className="mb-4 font-playfair text-xl">Helder Ferreira Advocacia</div>
+          <div className="mb-4 font-playfair text-xl">Helder Almeida Advocacia</div>
           <p className="text-sm text-gray-400 mb-4">
             OAB/SP 123.456
           </p>
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Helder Ferreira Advocacia. Todos os direitos reservados.
+            © {new Date().getFullYear()} Helder Almeida Advocacia. Todos os direitos reservados.
           </p>
         </div>
       </footer>
