@@ -5,9 +5,9 @@ import { User2, GraduationCap, Award, Scale } from "lucide-react";
 const team = [
   {
     name: "Dr. Helder Almeida",
-    role: "Advogado e Fundador",
-    image: "/lovable-uploads/942fde54-1c89-42ec-851d-7bbd53128686.png",
-    description: "Advogado com mais de 15 anos de experiência, especializado em direito civil e empresarial. Sua atuação é marcada pelo compromisso com a excelência e dedicação aos clientes.",
+    role: "Advogado e Fundador | OAB/DF 80.509",
+    image: "/lovable-uploads/helder-2.jpeg",
+    description: "Advogado com mais de 5 anos de experiência, especializado em direito civil e empresarial. Sua atuação é marcada pelo compromisso com a excelência e dedicação aos clientes.",
     icon: User2
   },
   {
@@ -36,7 +36,15 @@ export const Team = () => {
             <Card key={member.name} className="bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
               <CardContent className="p-8 text-center">
                 <div className="flex justify-center mb-4">
-                  <member.icon className="w-16 h-16 text-gold" />
+                  {member.image ? (
+                    <img 
+                      src={member.image} 
+                      alt={member.name} 
+                      className="w-32 h-32 rounded-full object-cover object-top shadow-md"
+                    />
+                  ) : (
+                    <member.icon className="w-16 h-16 text-gold" />
+                  )}
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-[#043f60]">{member.name}</h3>
                 <p className="text-gold font-medium mb-3">{member.role}</p>
