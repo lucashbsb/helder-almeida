@@ -1,37 +1,37 @@
 
-import { Scale, Briefcase, FileText, Users2, Shield, Gavel } from "lucide-react";
+import { Scale, FileText, Shield, Heart, Users, ScrollText, Building2 } from "lucide-react";
 import { ScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const areas = [
   {
-    icon: Briefcase,
-    title: "Demissão Injusta",
-    description: "Foi mandado embora sem receber tudo? Calculamos e cobramos cada centavo que você tem direito."
+    icon: Heart,
+    title: "Divórcio e Separação",
+    description: "Consensual ou litigioso, com filhos ou patrimônio envolvido. Conduzimos com discrição e cuidado em cada etapa."
+  },
+  {
+    icon: Users,
+    title: "Guarda e Pensão",
+    description: "Definição de guarda, pensão alimentícia, regulamentação de visitas. Priorizando sempre o bem-estar dos filhos."
+  },
+  {
+    icon: ScrollText,
+    title: "Inventário e Herança",
+    description: "Partilha de bens, testamentos, sucessão. Resolvemos com clareza para evitar conflitos familiares duradouros."
   },
   {
     icon: Scale,
-    title: "Horas Extras",
-    description: "Trabalhou além do horário e nunca viu a cor do dinheiro? Vamos atrás do que é seu."
-  },
-  {
-    icon: FileText,
-    title: "Verbas Rescisórias",
-    description: "FGTS, férias, 13º, aviso prévio — se não pagaram direito, a gente resolve."
-  },
-  {
-    icon: Users2,
-    title: "Acordos Trabalhistas",
-    description: "Quando dá pra resolver sem ir pro tribunal, negociamos o melhor acordo possível pra você."
+    title: "Contratos e Indenizações",
+    description: "Contratos descumpridos, cobranças indevidas, danos materiais ou morais. A gente analisa e busca o ressarcimento."
   },
   {
     icon: Shield,
-    title: "Direitos Negados",
-    description: "Adicional noturno, insalubridade, periculosidade — direitos que muita empresa finge que não existe."
+    title: "Direitos do Consumidor",
+    description: "Negativação injusta, produto com defeito, serviço não prestado, plano de saúde negado. Você tem direitos — exija-os."
   },
   {
-    icon: Gavel,
-    title: "Assédio e Danos Morais",
-    description: "Passou por humilhação ou situações abusivas? Você pode e deve ser indenizado."
+    icon: Building2,
+    title: "Questões Imobiliárias",
+    description: "Conflitos de posse, problemas com aluguel, vícios na construção, condomínio. Soluções para o seu patrimônio."
   }
 ];
 
@@ -44,7 +44,7 @@ export const Areas = () => {
             Como Podemos Ajudar
           </h2>
           <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-            Se você passou por alguma dessas situações, provavelmente tem direito a receber uma compensação. Fale conosco.
+            Se você está passando por uma dessas situações, podemos te ajudar a encontrar a melhor solução. A primeira conversa é gratuita.
           </p>
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

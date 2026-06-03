@@ -77,7 +77,7 @@ export const Navbar = () => {
                         {/* Mobile: WhatsApp à direita */}
                         <div className="md:hidden">
                             <a
-                                href="https://wa.me/556196558902?text=Ol%C3%A1%2C%20Dr.%20Helder!%20Preciso%20de%20ajuda%20com%20uma%20quest%C3%A3o%20trabalhista."
+                                href="https://wa.me/556196558902?text=Ol%C3%A1%2C%20Dr.%20Helder!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20conversa."
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center w-10 h-10 rounded-full text-white transition-colors duration-500"

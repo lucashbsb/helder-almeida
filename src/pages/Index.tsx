@@ -5,7 +5,7 @@ import { Areas } from "@/components/sections/Areas";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/hooks/use-scroll-reveal";
 
-import { Phone, Mail, MapPin, Check, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Check, Instagram, Heart, Scale, Shield } from "lucide-react";
 
 const Index = () => {
   return (
@@ -35,7 +35,7 @@ const Index = () => {
                     <strong className="text-[#043f60]">Dr. Helder Almeida</strong> — OAB/DF 80.509
                   </p>
                   <p className="text-gray-600 mb-4 text-lg">
-                    Há mais de 5 anos ajudando trabalhadores a receberem o que é deles por direito. Sem enrolação, sem promessas vazias.
+                    Há mais de 5 anos ajudando pessoas a resolverem questões jurídicas que afetam o dia a dia — separações, heranças, contratos, cobranças indevidas. Sem enrolação, sem promessas vazias.
                   </p>
                   <p className="text-gray-600 text-lg">
                     Cada caso é tratado com atenção individual. Você não é só um número aqui — é uma pessoa que merece respeito e justiça.
@@ -73,7 +73,7 @@ const Index = () => {
                 <div className="overflow-hidden rounded-lg shadow-lg hover-lift">
                   <img 
                     src="/lovable-uploads/helder-2.jpeg" 
-                    alt="Dr. Helder Almeida - Advogado Trabalhista" 
+                    alt="Dr. Helder Almeida - Advogado"
                     className="w-full h-auto"
                   />
                 </div>
@@ -108,6 +108,60 @@ const Index = () => {
         </div>
       </section>
       
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <h2 className="text-center font-playfair text-4xl font-bold text-[#043f60] mb-4">
+              Áreas de Atuação
+            </h2>
+            <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+              Atuação especializada em três pilares do dia a dia
+            </p>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                icon: Heart,
+                title: "Direito de Família",
+                description: "Conflitos familiares exigem sensibilidade e estratégia. Acompanho cada cliente com discrição e cuidado.",
+                topics: ["Divórcio", "Guarda", "Pensão", "União estável", "Inventário", "Adoção"]
+              },
+              {
+                icon: Scale,
+                title: "Direito Civil",
+                description: "Contratos, indenizações e disputas patrimoniais resolvidos com técnica e foco em solução prática.",
+                topics: ["Contratos", "Indenizações", "Posse", "Cobranças", "Responsabilidade civil", "Vizinhança"]
+              },
+              {
+                icon: Shield,
+                title: "Direito do Consumidor",
+                description: "Empresa errou com você? A lei protege o consumidor — e eu ajudo você a fazer valer essa proteção.",
+                topics: ["Cobranças indevidas", "Negativação", "Produto defeituoso", "Plano de saúde", "Atrasos", "Bancos"]
+              }
+            ].map((pilar, index) => (
+              <ScrollReveal key={pilar.title} delay={index * 0.15}>
+                <div className="bg-white p-8 rounded-xl border border-gray-100 hover-lift h-full">
+                  <div className="w-16 h-16 bg-[#043f60]/10 rounded-full flex items-center justify-center mb-6">
+                    <pilar.icon className="w-8 h-8 text-gold" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-playfair text-2xl font-bold text-[#043f60] mb-3">
+                    {pilar.title}
+                  </h3>
+                  <p className="text-gray-600 mb-5 leading-relaxed">
+                    {pilar.description}
+                  </p>
+                  <div className="flex flex-wrap gap-x-3 gap-y-1">
+                    {pilar.topics.map((topic) => (
+                      <span key={topic} className="text-gray-500 text-sm">• {topic}</span>
+                    ))}
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Areas />
 
       <section id="contato" className="py-20 bg-gray-50">
@@ -122,8 +176,8 @@ const Index = () => {
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <ScrollReveal delay={0}>
-              <a 
-                href="https://wa.me/556196558902?text=Ol%C3%A1%2C%20Dr.%20Helder!%20Vi%20seu%20site%20e%20gostaria%20de%20uma%20consulta%20gratuita%20para%20entender%20meus%20direitos%20trabalhistas."
+              <a
+                href="https://wa.me/556196558902?text=Ol%C3%A1%2C%20Dr.%20Helder!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20conversa."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center text-center bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-gold/30 transition-all cursor-pointer hover-lift h-full"
@@ -136,8 +190,8 @@ const Index = () => {
               </a>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <a 
-                href="https://wa.me/556196558902?text=Ol%C3%A1%2C%20Dr.%20Helder!%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20como%20voc%C3%AA%20pode%20me%20ajudar%20com%20meu%20caso%20trabalhista."
+              <a
+                href="https://wa.me/556196558902?text=Ol%C3%A1%2C%20Dr.%20Helder!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20conversa."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center text-center bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-gold/30 transition-all cursor-pointer hover-lift h-full"
@@ -150,8 +204,8 @@ const Index = () => {
               </a>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <a 
-                href="https://wa.me/556196558902?text=Ol%C3%A1%2C%20Dr.%20Helder!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20visita%20ao%20escrit%C3%B3rio%20para%20conversar%20sobre%20meu%20caso."
+              <a
+                href="https://wa.me/556196558902?text=Ol%C3%A1%2C%20Dr.%20Helder!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20conversa."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center text-center bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md hover:border-gold/30 transition-all cursor-pointer hover-lift h-full"
@@ -168,7 +222,7 @@ const Index = () => {
             <div className="text-center mt-12">
               <Button 
                 className="bg-[#043f60] hover:bg-[#032b42] text-white font-medium px-10 py-5 rounded-full shadow-sm transition-colors"
-                onClick={() => window.open("https://wa.me/556196558902?text=Ol%C3%A1%2C%20Dr.%20Helder!%20Preciso%20de%20ajuda%20com%20uma%20quest%C3%A3o%20trabalhista%20e%20vi%20que%20a%20primeira%20consulta%20%C3%A9%20gratuita.%20Podemos%20conversar%3F", "_blank")}
+                onClick={() => window.open("https://wa.me/556196558902?text=Ol%C3%A1%2C%20Dr.%20Helder!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20conversa.", "_blank")}
               >
                 Quero Falar com o Advogado
               </Button>
@@ -193,7 +247,7 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="mb-4 font-playfair text-xl">Dr. Helder Almeida</div>
           <p className="text-sm text-gray-400 mb-4">
-            OAB/DF 80.509 | Advocacia Trabalhista
+            OAB/DF 80.509 | Família • Cível • Consumidor
           </p>
           <a 
             href="https://instagram.com/advhelderalmeida"
