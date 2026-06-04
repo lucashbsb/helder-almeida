@@ -132,7 +132,7 @@ const Index = () => {
                   <Phone className="w-5 h-5 text-white" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-playfair text-lg text-[#043f60] mb-1">WhatsApp</h3>
-                <p className="text-gray-500">(61) 9655-8902</p>
+                <p className="text-gray-500">(61) 9.9655-8902</p>
               </a>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
@@ -160,7 +160,7 @@ const Index = () => {
                   <MapPin className="w-5 h-5 text-white" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-playfair text-lg text-[#043f60] mb-1">Escritório</h3>
-                <p className="text-gray-500">Brazlândia/DF</p>
+                <p className="text-gray-500">Brazlândia-DF</p>
               </a>
             </ScrollReveal>
           </div>
